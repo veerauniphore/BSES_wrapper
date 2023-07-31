@@ -1,7 +1,9 @@
 package com.uniphore.controller;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 
 import org.json.JSONArray;
@@ -107,8 +109,15 @@ public class SystemIdToValues {
 	@PostMapping("/agentTransferData")
 	public String agentTransferData(@RequestBody ReportEntity dto)  throws JSONException {
 		
-		System.out.println("req: " + dto.getCall_id());
+//		System.out.println("req: " + dto.getCall_id());
+//		SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm");
+//	     String pattern = "yyyy-MM-dd HH-mm";
+//	     Date dateInString =new SimpleDateFormat(pattern).format(new Date());
+//				    System.out.println("date : "+dateInString );
 		
+		Date date = new Date();
+		
+		dto.setCall_date(date);
 		report.save(dto);
 		
 		return "Success";
