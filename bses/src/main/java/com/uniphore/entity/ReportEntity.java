@@ -50,6 +50,19 @@ public class ReportEntity {
 	  
 	  @Column(name = "complaint_id", nullable = true)
 	    private String complaint_id;
+	  
+	  @Column(name = "cisco_agent_transfer", nullable = true)
+	    private String cisco_agent_transfer;
+	  
+	  
+
+	public String getCisco_agent_transfer() {
+		return cisco_agent_transfer;
+	}
+
+	public void setCisco_agent_transfer(String cisco_agent_transfer) {
+		this.cisco_agent_transfer = cisco_agent_transfer;
+	}
 
 	public String getInstance_id() {
 		return instance_id;

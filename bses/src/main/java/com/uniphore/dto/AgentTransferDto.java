@@ -12,6 +12,18 @@ public class AgentTransferDto {
 	private String cal_id;
 	
 	private String call_date_time;
+	
+	private String cisco_agent_transfer;
+	
+	
+
+	public String getCisco_agent_transfer() {
+		return cisco_agent_transfer;
+	}
+
+	public void setCisco_agent_transfer(String cisco_agent_transfer) {
+		this.cisco_agent_transfer = cisco_agent_transfer;
+	}
 
 	public String getInstance_id() {
 		return instance_id;
